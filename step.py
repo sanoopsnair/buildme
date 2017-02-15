@@ -7,11 +7,6 @@ import ast
 params = str(sys.argv)
 params = ast.literal_eval(params)
 
-# print len(params)
-# print params[0]
-# print params[1]
-# print params[2]
-# print params[3]
 
 def readConfig():
 	with open('config.yaml', 'r') as f:
@@ -36,17 +31,6 @@ def buildProject(configDatas=None, baseFolder=None, path=None):
 				os.system('mkdir '+destinPath+data['content']['path'])
 			else:
 				pass
-				
-				
-			# print data['content']
-
-
-# def grillStructure():
-# 	data = readConfig()
-
-# 	print "data"
-# 	print len(data['html'])
-
 
 
 if len(params) > 1:
@@ -57,24 +41,9 @@ if len(params) > 1:
 		path = None
 
 	buildProject(configDatas[params[1]], params[1], path)
-	# print configData[params[1]]
-
-
-
-	# grillStructure()
-	# print configData
-	# os.system('mkdir /home/toobler/projects/ladder_run/test_build_me')
-	# os.system('pwd')
-	# os.system('touch foo.html')
-	# os.system('touch foo.js')
-	# os.system('echo "Up hill and over dale">>foo.js')
-	# os.system('touch foo.css')
 else:
 	configDatas = readConfig()
 	keysOfConfig = configDatas.keys()
 	print "\n".join(keysOfConfig)
 
 
-	# print configData['html']
-	# for eachData in configData:
-		# print configData[eachData]['aliasName']
