@@ -1,0 +1,145 @@
+html:
+  - content:
+      name: js
+      type: folder
+      path: "/js"
+
+  - content:
+      name: custome.js
+      type: file
+      path: "/js/custome.js"
+      data: "yoy can put your js code at here\n testing new line"
+
+
+
+angular:
+  - content:
+      name: js
+      type: folder
+      path: "/js"
+
+  - content:
+      name: common.js
+      type: file
+      path: "/js/common.js"
+      data: "yoy can put your js code at here"
+
+
+# html:
+#   text: "0"
+#   - kids: 
+#       text: "1"
+#       type: folder
+#       kids: 
+#         text: "1.1"
+#         type: folder
+#       # - kids: 
+#       #   text: "1.2"
+#       #   type: file
+#       # - folder2: 
+#       #     type: folder
+#       #     name: custome
+#       #       # file: 
+#       #       #   type: file
+#       #       #   name: main.js
+#   - kids:
+#       type: folder
+#       text: "2"
+#   - kids:
+#       type: folder
+#       text: "3"
+
+
+# -  child:
+#     name: html
+#     type: folder
+#     kids:
+#       - child:
+#           name: js
+#           type: folder
+#           kids: 
+#             - child:
+#                 name: custom
+#                 type: file
+#                 kids: []
+#       - child:
+#           name: css
+#           type: folder
+#           kids: []
+#       - child:
+#           name: css
+#           type: folder
+#           kids: []
+
+# -  child:
+#     name: angular
+#     type: folder
+#     kids:
+#       - js
+#       - css
+#       - img
+
+
+# html:
+#   - folder1: 
+#       name: js
+#       type: folder
+#       folder1.1: 
+#         name: custome
+#         type: folder
+#       file1.2: 
+#         name: custome.js
+#         type: file
+#       # - folder2: 
+#       #     type: folder
+#       #     name: custome
+#       #       # file: 
+#       #       #   type: file
+#       #       #   name: main.js
+#   - folder2:
+#       type: folder
+#       name: css
+#   - folder3:
+#       type: folder
+#       name: img
+
+
+
+
+# invoice: 34843
+# date   : 2001-01-23
+# bill-to: &id001
+#     given  : Chris
+#     family : Dumars
+#     address:
+#         lines: |
+#             458 Walkman Dr.
+#             Suite #292
+#         city    : Royal Oak
+#         state   : MI
+#         postal  : 48046
+# ship-to: *id001
+# product:
+#     - sku         : BL394D
+#       quantity    : 4
+#       description : Basketball
+#       price       : 450.00
+#       test        : 
+#         name      :  sanu
+#         age       :  29
+#       test2       : 
+#         name      :  sanu
+#         age       :  29
+#     - sku         : BL4438H
+#       quantity    : 1
+#       description : Super Hoop
+#       price       : 2392.00
+# tax  : 251.42
+# total: 4443.52
+# comments: >
+#     Late afternoon is best.
+#     Backup contact is Nancy
+#     Billsmer @ 338-4338.
+
+
+

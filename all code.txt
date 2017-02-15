@@ -1,0 +1,74 @@
+#!/usr/bin/python
+import sys
+import os
+import yaml   #sudo pip install PyYAML
+import ast
+
+# ==================== old code ========================
+# Get the total number of args passed to the demo.py
+# total = len(sys.argv)
+# Get the arguments list
+params = str(sys.argv)
+params = ast.literal_eval(params)
+# Print it
+# print ("The total numbers of args passed to the script: %d " % total)
+# print ("Args list: %s " % cmdargs)
+
+
+#os.system('ls')
+# os.system("sudo ssh -i /home/toobler/sanoop/projects/xerxes/docs/TooblerUbuntu.pem ubuntu@52.74.25.94")
+# ==================== end of old code =====================
+
+# os.system("sudo ssh -i bucket/xerxes/TooblerUbuntu.pem ubuntu@52.74.25.94")
+
+
+
+
+# script = "sudo ssh -i bucket/"+tempDict['file_name']+" "+tempDict['server_ip']
+# os.system(script)
+
+def readConfig():
+	with open('config.yaml', 'r') as f:
+		doc = yaml.load(f)
+	return doc
+configData = readConfig()
+
+def findData(params=None):
+	if params:
+		for eachData in configData:
+			if params in configData[eachData].values():
+				return configData[eachData]
+			else:
+				pass
+	else:
+		print "no params in findData"
+		
+
+def createScript(params=None):
+	if params:
+		findedData = findData(params)
+		print findedData
+		if len(findedData) > 1:
+			script = "sudo ssh -i bucket/"+findedData['pemFile']+" "+findedData['ip']
+			os.system(script)
+		# print "script"
+		# print script
+
+
+	else:
+		print "no params in createScript"
+
+
+
+
+# for eachDoc in configData:
+	# print configData[eachDoc]
+# print len(doc)
+
+if len(params) > 1:
+	createScript(params[1])
+	# print "params given", params[1]
+	# s.system(script)
+else:
+	for eachData in configData:
+		print configData[eachData]['aliasName']
