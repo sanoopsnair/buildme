@@ -48,7 +48,6 @@ def buildProject(configDatas=None, baseFolder=None, path=None):
 # 	print len(data['html'])
 
 
-
 if len(params) > 1:
 	configDatas = readConfig()
 	if len(params) >= 3:
